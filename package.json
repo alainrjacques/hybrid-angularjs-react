@@ -1,0 +1,19 @@
+{
+  "name": "hybrid-angularjs-react",
+  "version": "1.0.0",
+  "description": "hybrid-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alainrjacques/hybrid-angularjs-react.git"
+  },
+  "author": "Alain Jacques",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alainrjacques/hybrid-angularjs-react/issues"
+  },
+  "homepage": "https://github.com/alainrjacques/hybrid-angularjs-react#readme"
+}
