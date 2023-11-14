@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hybrid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+    <script type="module" src="./dist/index.bundle.js"></script>
+    <script type="text/javascript">
+      angular
+        .element(document.getElementsByTagName("head"))
+        .append(
+          angular.element('<base href="' + window.location.pathname + '" />')
+        );
+    </script>
+  </head>
+  <body ng-app="myapp">
+    <div ng-controller="MainController">
+      Choose:
+      <a href="Book/Moby">AngularJS</a> |
+      <a href="React/Scarlet">React</a><br />
+
+      <div ng-view></div>
+
+      <hr />
+
+      <pre>$location.path() = {{$location.path()}}</pre>
+      <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+      <pre>$route.current.params = {{$route.current.params}}</pre>
+      <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
+      <pre>$routeParams = {{$routeParams}}</pre>
+    </div>
+  </body>
+</html>
