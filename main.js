@@ -1,10 +1,19 @@
-import angular from "angular";
+import "@/main";
+import { hybridAppStore } from "@/hybridAppStore";
 import { mapRoutesToAngularjs } from "./src/routes/helpers";
 import { routeRecords } from "./src/routes/management";
 import { buildReactApp } from "./src/buildReactApp";
 var app = angular.module("myapp", ["ngRoute"]);
 
 angular.module("app.components", []);
+app.run(function ($rootScope) {
+  $rootScope.$on('$locationChangeSuccess', function () {
+    console.log("LOCATION CHANGE");
+    hybridAppStore
+      .getState()
+      .setUrlRoute(window.location.pathname + window.location.search);
+  });
+});
 
 app
   .controller(
