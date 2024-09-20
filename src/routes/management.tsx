@@ -1,4 +1,4 @@
-import { Book } from "@/components/Book";
+import { Book, Book2 } from "@/components/Book";
 import { Routes } from "@/routes/type";
 
 export const routeRecords: Array<Routes> = [
@@ -9,11 +9,11 @@ export const routeRecords: Array<Routes> = [
   },
   {
     path: "React/Scarlet2",
-    element: <Book />,
+    element: <Book2 />,
     searchName: "books",
     angularjsOptions: {
       name: "bookTest",
-      Component: Book,
+      Component: Book2,
     },
   },
 ];
