@@ -8,7 +8,6 @@ export function buildReactApp(
   injectNames: string[] = [],
   bindingNames: string[] = []
 ) {
-    console.log("TESTTER")
   return mountToAngular(
     ({ ...props }) => {
       return (

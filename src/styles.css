@@ -1,0 +1,120 @@
+:root {
+  --blue: #1565c0;
+  --blue-bg: #e3f0ff;
+  --red: #c62828;
+  --red-bg: #ffebee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #1c2733;
+  background: #f5f7fa;
+  line-height: 1.5;
+}
+
+.page-header,
+.page-footer,
+.react-page {
+  max-width: 920px;
+  margin: 16px auto;
+  padding: 0 16px;
+}
+
+.cards {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 8px 16px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  --c: #455a64;
+  --bg: #fff;
+  background-color: var(--bg);
+  border: 2px solid var(--c);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+.card--react {
+  --c: var(--blue);
+  --bg: var(--blue-bg);
+}
+.card--angular {
+  --c: var(--red);
+  --bg: var(--red-bg);
+}
+
+.card--tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--c);
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.field {
+  display: block;
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.field input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border: 1px solid #b0bec5;
+  border-radius: 6px;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--c, #455a64);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.echo {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.nav a,
+.back-link {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--red);
+}
+.nav a:hover,
+.back-link:hover {
+  text-decoration: underline;
+}

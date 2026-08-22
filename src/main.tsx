@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { RouteProviderDefined } from "@/router";
+import "./styles.css"
 
 const CONTAINER = document.getElementById("react-view");
 

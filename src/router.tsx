@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "*",
-        element: <>OOHH?</>,
+        element: <></>,
         errorElement: <></>,
       },
       ...routeRecords.map(({ path, element }) => ({

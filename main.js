@@ -8,6 +8,9 @@ var app = angular.module("myapp", ["ngRoute", "app.components"]);
 
 angular.module("app.components", []);
 
+array.forEach(element => {
+  
+});
 angular
   .module("app.components")
   .component("reactEmbedded", buildReactApp(Book3, [], []))
@@ -21,7 +24,7 @@ app
       $scope.$location = $location;
       $scope.$routeParams = $routeParams;
       console.log("$route".$route);
-    }
+    },
   )
 
   .controller("BookController", function ($scope, $routeParams) {
@@ -31,7 +34,7 @@ app
 
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider.when("/Book/:bookId", {
-      templateUrl: "book.html",
+      template: require("./book.html"),
       controller: "BookController",
     });
     // .when("/React/:bookId", {
@@ -62,8 +65,8 @@ app.run(function ($rootScope, $route) {
         buildReactApp(
           route.angularjsOptions.Component,
           [],
-          route.angularjsOptions.bindingNames
-        )
+          route.angularjsOptions.bindingNames,
+        ),
       );
   });
 });
